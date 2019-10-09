@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaPrincipalController">
+   <children>
+      <MenuBar layoutX="40.0" layoutY="26.0" prefHeight="22.0" prefWidth="239.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Usuarios">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Cambiar Seña" />
+                  <MenuItem mnemonicParsing="false" text="Administrar Usuarios" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Licencia">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Verificar mi Licencia" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Versión" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="botonLaboratorio" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="61.0" layoutY="126.0" mnemonicParsing="false" onAction="#mostrarPainelLaboratorio" prefHeight="125.0" prefWidth="125.0" text="Laboratorio" textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../iconos/laboratorio.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="botonDisponibilidad" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="217.0" layoutY="126.0" mnemonicParsing="false" onAction="#mostrarPainelDisponibilidad" prefHeight="125.0" prefWidth="125.0" text="Disponibilidad" textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../iconos/hammer.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="botonReporteDeVentas" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="61.0" layoutY="271.0" mnemonicParsing="false" onAction="#mostrarPainelVendas" prefHeight="125.0" prefWidth="125.0" text="Reporte de Ventas" textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../iconos/report%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="botonCadastros" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="217.0" layoutY="271.0" mnemonicParsing="false" onAction="#mostrarPainelCadastro" prefHeight="125.0" prefWidth="125.0" text="Cadastros" textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../iconos/clipboard.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="botonSemillaBasica" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="61.0" layoutY="419.0" mnemonicParsing="false" onAction="#mostrarPainelSemillaBasica" prefHeight="125.0" prefWidth="125.0" text="Semilla Basica" textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../iconos/sack.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="botonProtocolos" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="217.0" layoutY="419.0" mnemonicParsing="false" onAction="#mostrarPainelProtocolos" prefHeight="125.0" prefWidth="125.0" text="Protocolos" textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../iconos/checklist.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="botonDocumentos" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="61.0" layoutY="569.0" mnemonicParsing="false" onAction="#mostrarPainelDocumentos" prefHeight="125.0" prefWidth="125.0" text="Documentos" textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../iconos/report.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="botonResultados" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="217.0" layoutY="569.0" mnemonicParsing="false" onAction="#mostrarPainelResultados" prefHeight="125.0" prefWidth="125.0" text="Resultados" textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../iconos/ranking.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="botonReclamos" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="61.0" layoutY="713.0" mnemonicParsing="false" onAction="#mostrarPainelReclamos" prefHeight="125.0" prefWidth="125.0" text="Reclamos" textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../iconos/complaint.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TabPane id="Laboratorio" fx:id="tabPainelLaboratorio" layoutX="394.0" layoutY="126.0" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="394.0" AnchorPane.rightAnchor="206.0" AnchorPane.topAnchor="126.0">
+        <tabs>
+            <Tab fx:id="tabLaboratorioCadastroMuestras" text="Cadastro de Muestras">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botonLaboratorioMuestraSoja" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="73.0" layoutY="74.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="SOJA" textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/soybean2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonLaboratorioMuestraMaiz" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="73.0" layoutY="258.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="MAIZ" textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/corn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonLaboratorioMuestraTrigo" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="73.0" layoutY="454.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="TRIGO" textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/wheat.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabLaboratorioRegistroResultados" text="Registro de Resultados">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botonLaboratorioCargarResultados" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="73.0" layoutY="74.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="CARGAR RESULTADOS" textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/test.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabLaboratorioLiberacionLotes" text="Liberación de Lotes">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botonLaboratorioLiberarLotes" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="152.0" layoutY="163.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="LIBERAR LOTES" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="74.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/delivery.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <TabPane fx:id="tabPainelDisponibilidad" layoutX="394.0" layoutY="126.0" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.leftAnchor="394.0" AnchorPane.topAnchor="126.0">
+        <tabs>
+          <Tab text="Disponibilidad General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botonDisponibilidadQuitar" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Generar Disponibilidad" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="74.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/hammer.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TabPane fx:id="tabPainelReporteVentas" layoutX="394.0" layoutY="126.0" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.leftAnchor="394.0" AnchorPane.topAnchor="126.0">
+        <tabs>
+          <Tab fx:id="tabVentasInternas" text="Ventas Internas">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botonReporteVentasAgrotec" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="105.0" layoutY="124.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Ventas Nacionales" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="74.0">
+                           <graphic>
+                              <ImageView fitHeight="53.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/logo%20agrotec.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab fx:id="tabVentasNacionales" text="Nacionales">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botonReporteVentasNacionales" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="87.0" layoutY="144.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Ventas Nacionales" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="74.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/paraguay.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <TabPane id="Cadastro" fx:id="tabPainelCadastro" layoutX="394.0" layoutY="126.0" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="394.0" AnchorPane.rightAnchor="206.0" AnchorPane.topAnchor="126.0">
+        <tabs>
+            <Tab fx:id="tabCadastroSoja" text="Cadastro Soja">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botonCadastroVariedadesSoja" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="73.0" layoutY="74.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="VARIEDADES" textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/soybean2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonCadastroObtentoresSoja" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="73.0" layoutY="258.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="OBTENTORES" textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/soybean2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonCadastroLotesSoja" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="73.0" layoutY="454.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="LOTES" textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/soybean2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabCadastroMaiz" text="Cadastro Maiz">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botonCadastroVariedadesMaiz" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="73.0" layoutY="74.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="HÍBRIDOS" textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/corn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonCadastroObtentoresMaiz" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="73.0" layoutY="258.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="OBTENTORES" textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/corn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonCadastroLotesMaiz" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="73.0" layoutY="454.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="LOTE" textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/corn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabCadastroTrigo" text="Cadastro Trigp">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botonCadastroVariedadesTrigo" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="73.0" layoutY="74.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="VARIEDADES" textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/wheat.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonCadastroObtentoresTrigo" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="73.0" layoutY="258.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="OBTENTORES" textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/wheat.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonCadastroLotesTrigo" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="73.0" layoutY="454.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="LOTES" textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/wheat.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <TabPane fx:id="tabPainelSemillaBasica" layoutX="394.0" layoutY="126.0" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.leftAnchor="394.0" AnchorPane.topAnchor="126.0">
+        <tabs>
+          <Tab text="Semilla Básica">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botonSemillaBasicaCosto" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="COSTO" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="74.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/sack.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonSemillaBasicaPropuestaFinalObtentor" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="PROPUESTA" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="258.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/sack.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonSemillaBasicaHistorico" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="HISTORICO DE PROPUESTAS" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="454.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/sack.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonSemillaBasicaFlowContrato" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="FLUJO DE DOCUMENTACIÓN" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="271.0" AnchorPane.topAnchor="74.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/sack.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="botonSemillaBasicaRoyalties" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="ROYALTIES" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="271.0" AnchorPane.topAnchor="258.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/sack.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TabPane fx:id="tabPainelProtocolos" layoutX="394.0" layoutY="126.0" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.leftAnchor="394.0" AnchorPane.topAnchor="126.0">
+        <tabs>
+          <Tab text="Protocolos de Trabajo">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botonProtocoloVerificacionDeCampo" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Verificación de Campo" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="74.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/checklist.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonProtocoloPreCosecha" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Pre Cosecha" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="258.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/checklist.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonProtocoloCosecha" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Cosecha" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="454.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/checklist.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonProtocoloRecepcion" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Recepción" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="271.0" AnchorPane.topAnchor="74.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/checklist.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonProtocoloProcesamiento" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Procesamiento" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="271.0" AnchorPane.topAnchor="258.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/checklist.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonProtocoloLaboratorio" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Laboratorio" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="271.0" AnchorPane.topAnchor="454.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/checklist.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TabPane fx:id="tabPainelDocumentos" layoutX="394.0" layoutY="126.0" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.leftAnchor="394.0" AnchorPane.topAnchor="126.0">
+        <tabs>
+          <Tab text="Documentos Senave">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botonDocumentosInscripciónDeCampos" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Inscripción de Campo" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="74.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/sack.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonDocumentosDisponibilidadDeSemillas" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Disponibilidad de Semillas" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="258.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/sack.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonDocumentosSolicitudDeEtiquetas" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Solicitud de Etiquetas" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="454.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/sack.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonDocumentosEmisiónCertificados" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Certificados de Semillas" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="271.0" AnchorPane.topAnchor="74.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/sack.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Documentos Sencillos">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botonDocumentosReporteDeCalidadSoja" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Calidad Soja" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="74.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/sack.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonDocumentosReporteDeCalidadMaiz" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Calidad Maiz" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="258.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/sack.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonDocumentosReporteDeCalidadTrigo" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Calidad Trigo" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="454.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/sack.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TabPane fx:id="tabPainelResultados" layoutX="394.0" layoutY="126.0" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.leftAnchor="394.0" AnchorPane.topAnchor="126.0">
+        <tabs>
+          <Tab text="Resultados de Cosechas">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botonResultadosCargarEnsayos" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Cargar Ensayos" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="74.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/hammer.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonResultadosEnsayosResultados" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Resultados de Ensayos" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="258.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/hammer.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonResultadosCargarParcelasComerciales" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Cargar Parcela Comercial" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="271.0" AnchorPane.topAnchor="74.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/hammer.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonResultadosParcelasComercialesResultados" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Resultados de Parcelas Comerciales" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="271.0" AnchorPane.topAnchor="258.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/hammer.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TabPane fx:id="tabPainelReclamos" layoutX="394.0" layoutY="126.0" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.leftAnchor="394.0" AnchorPane.topAnchor="126.0">
+        <tabs>
+          <Tab text="Atención a Reclamos">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botonReclamosCargarReclamo" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Cargar Reclamos" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="74.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/hammer.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonReclamosEditarReclamo" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Editar Reclamos" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="258.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/hammer.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonReclamosVerReclamo" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="116.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Ver Reclamos" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="271.0" AnchorPane.topAnchor="74.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/hammer.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
