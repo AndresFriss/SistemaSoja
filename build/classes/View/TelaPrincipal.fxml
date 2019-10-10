@@ -114,7 +114,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <TabPane id="Laboratorio" fx:id="tabPainelLaboratorio" layoutX="394.0" layoutY="126.0" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="394.0" AnchorPane.rightAnchor="206.0" AnchorPane.topAnchor="126.0">
+      <TabPane id="Laboratorio" fx:id="tabPainelLaboratorio" layoutX="394.0" layoutY="126.0" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="394.0" AnchorPane.rightAnchor="206.0" AnchorPane.topAnchor="126.0">
         <tabs>
             <Tab fx:id="tabLaboratorioCadastroMuestras" text="Cadastro de Muestras">
               <content>
@@ -216,7 +216,7 @@
                      <children>
                         <Button fx:id="botonReporteVentasAgrotec" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="105.0" layoutY="124.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Ventas Nacionales" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="73.0" AnchorPane.topAnchor="74.0">
                            <graphic>
-                              <ImageView fitHeight="53.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="53.0" fitWidth="123.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../iconos/logo%20agrotec.png" />
                                  </image>
@@ -353,6 +353,32 @@
                   </AnchorPane>
               </content>
             </Tab>
+            <Tab fx:id="tabCadastroGenerales" text="Cadastros Generales">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botonCadastroClientes" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="73.0" layoutY="74.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Clientes" textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/target.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="botonCadastroFornecedores" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="73.0" layoutY="258.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="125.0" text="Provedor" textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/fundraiser.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
         </tabs>
       </TabPane>
       <TabPane fx:id="tabPainelSemillaBasica" layoutX="394.0" layoutY="126.0" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.leftAnchor="394.0" AnchorPane.topAnchor="126.0">
@@ -365,7 +391,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/sack.png" />
+                                    <Image url="@../iconos/save-money.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -374,7 +400,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/sack.png" />
+                                    <Image url="@../iconos/handshake.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -383,7 +409,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/sack.png" />
+                                    <Image url="@../iconos/lockers.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -392,7 +418,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/sack.png" />
+                                    <Image url="@../iconos/planner.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -404,7 +430,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/sack.png" />
+                                    <Image url="@../iconos/price-tag.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -425,7 +451,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/checklist.png" />
+                                    <Image url="@../iconos/plant.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -434,7 +460,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/checklist.png" />
+                                    <Image url="@../iconos/soybean%20plant.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -443,7 +469,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/checklist.png" />
+                                    <Image url="@../iconos/combine-harvester.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -452,7 +478,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/checklist.png" />
+                                    <Image url="@../iconos/shipped.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -461,7 +487,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/checklist.png" />
+                                    <Image url="@../iconos/factory.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -470,7 +496,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/checklist.png" />
+                                    <Image url="@../iconos/laboratorio.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -481,7 +507,7 @@
           </Tab>
         </tabs>
       </TabPane>
-      <TabPane fx:id="tabPainelDocumentos" layoutX="394.0" layoutY="126.0" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" visible="false" AnchorPane.leftAnchor="394.0" AnchorPane.topAnchor="126.0">
+      <TabPane fx:id="tabPainelDocumentos" layoutX="394.0" layoutY="126.0" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="394.0" AnchorPane.topAnchor="126.0">
         <tabs>
           <Tab text="Documentos Senave">
             <content>
@@ -491,7 +517,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/sack.png" />
+                                    <Image url="@../iconos/report.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -500,7 +526,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/sack.png" />
+                                    <Image url="@../iconos/report.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -509,7 +535,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/sack.png" />
+                                    <Image url="@../iconos/report.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -518,7 +544,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/sack.png" />
+                                    <Image url="@../iconos/report.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -535,7 +561,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/sack.png" />
+                                    <Image url="@../iconos/report.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -544,7 +570,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/sack.png" />
+                                    <Image url="@../iconos/report.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -553,7 +579,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/sack.png" />
+                                    <Image url="@../iconos/report.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -574,7 +600,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/hammer.png" />
+                                    <Image url="@../iconos/Captura.PNG" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -583,7 +609,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/hammer.png" />
+                                    <Image url="@../iconos/ranking.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -592,7 +618,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/hammer.png" />
+                                    <Image url="@../iconos/harvester.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -601,7 +627,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/hammer.png" />
+                                    <Image url="@../iconos/ranking.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -622,7 +648,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/hammer.png" />
+                                    <Image url="@../iconos/complaint.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -631,7 +657,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/hammer.png" />
+                                    <Image url="@../iconos/complaint.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -640,7 +666,7 @@
                            <graphic>
                               <ImageView fitHeight="86.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../iconos/hammer.png" />
+                                    <Image url="@../iconos/complaint.png" />
                                  </image>
                               </ImageView>
                            </graphic>
